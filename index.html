@@ -14,7 +14,41 @@ box-sizing:border-box;
 font-family:Arial, sans-serif;
 scroll-behavior:smooth;
 }
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide Up Animation */
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Hover Animation */
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
 body{
 background:#ffffff;
 color:#333;
@@ -155,8 +189,8 @@ to{opacity:1;}
 
 <!-- HOME -->
 <section id="home">
-<h1>Grease & Shine All Purpose Degreaser</h1>
-<h3>SOO GOOD SOO CLEAN</h3>
+<h1 class="fade-in">Grease & Shine All Purpose Degreaser</h1>
+<h2 class="fade-in">SOO GOOD SOO CLEAN</h2>
 
 <img src="logo.jpg" style="width:200px;margin-top:30px;border:5px solid red;">
 
